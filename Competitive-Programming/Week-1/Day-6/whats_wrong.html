@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CP-W1D6</title>
+</head>
+<body>
+	<button id="btn-0">Button 1!</button>
+	<button id="btn-1">Button 2!</button>
+	<button id="btn-2">Button 3!</button>
+
+	<script type="text/javascript">
+	    var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+	    var btnNum = 0;
+	    for (btnNum = 0; btnNum < prizes.length; btnNum++)(function (btnNum) {
+	        document.getElementById('btn-' + btnNum).onclick = function() {
+	            alert(prizes[btnNum]);
+	        };
+	    })(btnNum);
+	    // The problem is with the scope of the variable btnNum
+	</script>
+</body>
+</html>
